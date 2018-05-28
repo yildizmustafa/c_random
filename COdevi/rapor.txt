@@ -1,0 +1,22 @@
+Ödevde týpký önceki ödevdeki gibi belirli koþullarý saðlayan kiþileri oluþturmamýz
+isteniyor. Oluþturulacak kiþiler için isimlerin olduðu bir dosya ve yaþ, Türkiye Cumhuriyeti
+numarasý, telefon ve imei numarasý için belirli kýstaslar belirlenmiþtir. Bu kýstaslar
+doðrultusunda belirlenen sayýdaki kiþiyi bir dosyaya belirli bir formatta yazmamýz
+istenmektedir. Daha sonra da ayný dosyadaki kiþiler okunarak oluþturma koþullarýný saðlayýp
+saðlamadýklarýnýn test edilmesi de istenmekdir. Dosya tekrar okunup test edildikten sonra
+okunan kiþilerin kaçýnýn Türkiye Cumhuriyeti numaralarý ve telefonlarýnýn IMEI numaralarýný
+doðru olup olmadýðý ekrana yazdýrýlmaktadýr.
+Rastgele kiþi sýnýfý ilk kez tanýmlandýðýnda (bellekte yer açýldýðýnda) kendi içindeki
+isimler deðiþkenine random_isimler.txt deki isimler aktarýlýyor. Her 1024 isimde bir dizinin
+boyutu 1024 arttýralarak dizinin teoride sýnýrsýz eleman almasý saðlanmýþtýr. Kiþi üretmek için
+ana fonksiyonda çaðrýlan fonksiyonda parametre olarak ilk tanýmlanan rastgelekiþi ve kaç
+adet kiþinin üretileceði bilgisi gönderiliyor. Üretilen Türkiye Cumhuriyeti, telefon ve IMEI
+numarlarý kendi içindeki algoritmalarýna göre üretilip kendi “char *” deðiþkenlerine atýlýyor.
+(Üretilen her rakama (int) ‘0’ eklenerek o rakamýn char karþýlýðýný bulabiliyoruz). Kiþiler
+kontrol edilirken ilk önce fscanf fonksiyonu ile yazýlan formatta okuma yapýp deðiþkenere
+atýyorum. Daha sonra yeni bir tane kiþi oluþturup okuduðum formatta verilerini yazdýrýyorum.
+Doðruluk kontrolleri yaptýrýldýktan sonra gerekli deðiþkenler arttýrýlýyor. Daha sonra döngünün
+baþýnda oluþan Kiþi nesnesi silinip bellek boþaltýlýyor ve sonraki satýrý okuyup tekrar
+dolduruluyor. Böylece bellek gereksiz yere doldurmadan tekrar kullanýlabiliyor. (Kiþi nesnesi
+silinirken telefon, imei ve kimlikno sýnýflarý ve kendi içinde tanýmlanmýþ deðiþkenlerde
+siliniyor.)
